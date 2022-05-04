@@ -12,6 +12,13 @@ def home(request):
     return render(request,'app/home.html',context)
 
 
+def getMarks(request):
+    mark = Marks.objects.all()
+    context = {
+        'mark':mark,
+    }
+    return render(request,'app/getmarks.html',context)
+
 
 def addMarks(request): 
     if request.user.is_authenticated:
