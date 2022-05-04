@@ -1,0 +1,36 @@
+
+{% extends 'app/Links.html' %}
+
+{% block content %}
+
+<div class="container ">
+
+<div class="row">
+	<div class="col-md-9">
+		<h5>Marks:</h5>
+		
+		<div class="card card-body">
+            
+			<table class="table table-sm">
+				<tr>
+					<th>Student Id</th>
+                    <th>Student Name</th>
+			
+				</tr>
+                {% for m in marks %}
+		        <tr>
+                    <td>{{m.StudentId}} </td>
+					<td>{{m.StudentName}} </td>
+					
+				</tr>
+				{% endfor %}
+			</table>
+            
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}
+ 

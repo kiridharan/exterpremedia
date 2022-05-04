@@ -29,7 +29,10 @@
 					<td>{{m.ChemistryMarks}} </td>
 					<td>{{m.MathsMarks}} </td>
 					<td>{{m.EnglishMarks}} </td>
-					<td>{{m.ComputerMarks}} </td>
+					<td>{{m.LanguageMarks}}</td>
+					{% if request.user.is_staff %}
+					<td><a href="delete/{{ m.StudentId }}">delete</a></td>
+					{% endif %}
 				</tr>
 				{% endfor %}
 			</table>

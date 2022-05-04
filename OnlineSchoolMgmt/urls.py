@@ -28,4 +28,7 @@ urlpatterns = [
     path('login/', loginPage,name='login'),
     path('logout/', logoutPage,name='logout'),
     path('register/', registerPage,name='register'),
+    
+    path('delete/<str:StudentId>', delete, name='delete'),
+    # pa
 ]

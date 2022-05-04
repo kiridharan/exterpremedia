@@ -20,6 +20,16 @@ def getMarks(request):
     return render(request,'app/getmarks.html',context)
 
 
+
+def delete(request,id):
+    if request.user.is_authenticated:
+        marks = Marks.objects.get(StudentId=StudentId)
+        
+        marks.delete()
+        return redirect('/')
+    else:
+        return redirect('home')
+
 def addMarks(request): 
     if request.user.is_authenticated:
         form=addMarksform()
