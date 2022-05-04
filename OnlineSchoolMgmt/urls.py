@@ -21,11 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home ,name='home'),
    
-    path('addAttendance/', addAttendance,name='addAttendance'),
    
     path('addMarks/', addMarks,name='addMarks'),
  
-    path('addNotice/', addNotice,name='addNotice'),
 
     path('login/', loginPage,name='login'),
     path('logout/', logoutPage,name='logout'),

@@ -23,12 +23,6 @@
       {% if request.user.is_staff %}
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'addAttendance' %}">Add Attendance</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'addNotice' %}">Add Notice</a>
-      </li>
-      <li class="nav-item active">
         <a class="nav-link" href="{% url 'addMarks' %}">Add Marks</a>
       </li>
       {% endif %}
